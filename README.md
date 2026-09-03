@@ -24,7 +24,7 @@ Or install a tagged release binary from [GitHub Releases](https://github.com/fus
 Or with `go install` (binary in `$GOPATH/bin` or `$HOME/go/bin`):
 
 ```bash
-go install github.com/fuse/pmx/cmd/pmx@v0.1.0
+go install github.com/fuse/pmx/cmd/pmx@latest
 ```
 
 ## Releases
@@ -32,11 +32,11 @@ go install github.com/fuse/pmx/cmd/pmx@v0.1.0
 Push a semver tag on `develop` to build release binaries (linux, darwin, windows) with embedded version metadata:
 
 ```bash
-git tag v0.1.0
-git push origin v0.1.0
+git tag 0.1.0
+git push origin 0.1.0
 ```
 
-The workflow sets `Version` (tag without `v`), `Commit`, and `BuildTime` via `-ldflags`. Check with:
+The workflow sets `Version` (tag name), `Commit`, and `BuildTime` via `-ldflags`. Check with:
 
 ```bash
 pmx version

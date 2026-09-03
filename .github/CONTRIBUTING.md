@@ -9,4 +9,4 @@
 
 ## Releases
 
-Tag `develop` with a semver tag (`v0.1.0`, `v1.2.3`, …) to trigger the release workflow and publish binaries on GitHub Releases.
+Tag `develop` with a semver tag (`0.1.0`, `1.2.3`, …) to trigger the release workflow and publish binaries on GitHub Releases.
