@@ -1,0 +1,19 @@
+# Proxmox OpenID settings for pmx.
+# Copy to ~/.config/pmx/config.yaml and adjust.
+
+endpoint: https://pve.example.com
+realm: my-openid-realm
+
+# Local HTTP listener captures the IdP redirect automatically.
+# Register http://127.0.0.1:<callback_port>/callback on the IdP.
+callback_port: 8765
+
+# Optional override (defaults to http://127.0.0.1:<callback_port>/callback).
+# redirect_url: http://127.0.0.1:8765/callback
+
+# Optional. Defaults to ~/.config/pmx/session.json
+# session_file: ~/.config/pmx/session.json
+
+# Optional. Expected Proxmox ticket lifetime for local expiry hints (default 2h).
+# Adjust if your cluster uses a different API ticket timeout.
+# session_ttl: 2h
