@@ -17,26 +17,27 @@ asdf install
 go build -o bin/pmx ./cmd/pmx
 ```
 
+Or install a tagged release binary from [GitHub Releases](https://github.com/fuse/pmx/releases).
+
 Or with `go install` (binary in `$GOPATH/bin` or `$HOME/go/bin`):
 
 ```bash
-go install github.com/fuse/pmx/cmd/pmx@latest
+go install github.com/fuse/pmx/cmd/pmx@v0.1.0
 ```
 
-`pmx version` works out of the box but shows placeholders (`dev`, `none`) unless you bake metadata in at build time. That is only useful if you distribute binaries and want to know which release you are running. For day-to-day local use, the simple `go build` above is enough.
+## Releases
+
+Push a semver tag on `develop` to build release binaries (linux, darwin, windows) with embedded version metadata:
 
 ```bash
-./bin/pmx version
-# pmx dev
-# commit: none
-# built:  unknown
+git tag v0.1.0
+git push origin v0.1.0
 ```
 
-Optional, when tagging a release:
+The workflow sets `Version` (tag without `v`), `Commit`, and `BuildTime` via `-ldflags`. Check with:
 
 ```bash
-go build -ldflags="-X github.com/fuse/pmx/internal/cli.Version=0.1.0" \
-  -o bin/pmx ./cmd/pmx
+pmx version
 ```
 
 ## Configuration
