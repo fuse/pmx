@@ -6,6 +6,8 @@ Obtain a Proxmox API session ticket bound to your identity-provider user, then u
 
 Repository: https://github.com/fuse/pmx
 
+Contribution guidelines (squash merge on PRs): [.github/CONTRIBUTING.md](.github/CONTRIBUTING.md)
+
 ## Install
 
 From a clone:
